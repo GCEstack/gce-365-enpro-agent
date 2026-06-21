@@ -4,7 +4,6 @@ import { state, setState, subscribe } from './state.js';
 import { showToast, qs } from './utils.js';
 import { initStats } from './components/stats.js';
 import { initQueue } from './components/queue.js';
-import { initDetail } from './components/detail.js';
 import { initUpload } from './components/upload.js';
 import { initCrosswalk } from './components/crosswalk.js';
 import { initCism } from './components/cism.js';
