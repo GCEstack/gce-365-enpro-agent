@@ -1,6 +1,6 @@
 // static/js/components/cism.js — CISM batch admin
 import { api } from '../api.js';
-import { escapeHtml, qs, showToast } from '../utils.js';
+import { confirmDialog, escapeHtml, qs, showToast } from '../utils.js';
 
 export function init(container) {
   container.innerHTML = `
@@ -43,7 +43,7 @@ async function loadSchema(container) {
 }
 
 async function clearBatch(container) {
-  if (!confirm('Clear the current CISM batch?')) return;
+  if (!confirmDialog('Clear the current CISM batch?')) return;
   try {
     await api.clearCismBatch();
     showToast('Batch cleared', 'CISM batch has been cleared.', 'success');
